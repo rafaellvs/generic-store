@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import theme from 'src/helpers/theme'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -6,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: Montserrat;
-    color: #FFFFFF;
+    color: ${theme.colors.white};
   }
 `
 

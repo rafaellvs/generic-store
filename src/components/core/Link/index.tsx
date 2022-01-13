@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import theme from 'src/helpers/theme'
 
 const Link = styled.a`
-  color: #78D98A;
+  color: ${theme.colors.secondary};
   transition: opacity 0.3s;
 
   :hover {
