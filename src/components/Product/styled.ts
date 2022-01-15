@@ -4,20 +4,25 @@ import theme from 'src/helpers/theme'
 export const Container = styled.div`
   text-align: center;
   background: ${theme.colors.white};
-  width: 300px;
   padding: 16px;
-  margin: 20px;
   border-radius: 4px;
   
   h4, p {
     color: ${theme.colors.black};
   }
+
+  @media (max-width: 480px) {
+    width: 100%;
+
+    button {
+      width: 100%;
+    }
+  }
 `
 
 export const Image = styled.img`
-  border-radius: 4px;
-  margin-bottom: 10px;
   height: 200px;
+  margin-bottom: 10px;
 `
 
 export const AvailableText = styled.p`

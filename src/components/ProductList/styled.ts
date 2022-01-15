@@ -7,9 +7,11 @@ export const Container = styled.div``
 export const Products = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 32px;
 
   @media(max-width: 480px) {
     grid-template-columns: 1fr;
+    grid-gap: 16px;
   }
 `
 

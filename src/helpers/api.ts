@@ -15,3 +15,9 @@ export const getProducts = async (page: number): Promise<Product[]> => {
 
   return response.data
 }
+
+export const getProduct = async (id: number): Promise<Product> => {
+  const response = await axios.get(`${BASE_URL}/${id}`)
+
+  return response.data
+}

@@ -11,7 +11,7 @@ const NotFound = () => {
       <Text type='h1' padding='0 0 16px 0'>
         {'Sorry! We couldn\'t find the page you were looking for.'}
       </Text>
-      <Link href='/'>Back to home</Link>
+      <Link to='/'>Back to home</Link>
     </Container>
   )
 }

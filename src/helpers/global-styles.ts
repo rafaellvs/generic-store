@@ -9,6 +9,15 @@ const GlobalStyles = createGlobalStyle`
     font-family: Montserrat;
     color: ${theme.colors.white};
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .swal2-shown {
+    overflow: unset !important;
+    padding-right: 0px !important;
+  }
 `
 
 export default GlobalStyles
