@@ -5,11 +5,11 @@ import ProductList from 'src/components/ProductList'
 
 import { Container } from './styled'
 
-const ShoppingList = () => {
+const Store = () => {
   return (
     <Container>
       <Text type='h1' padding='0 0 32px 0'>
-        Shopping List
+        Liven Store
       </Text>
 
       <ProductList />
@@ -17,4 +17,4 @@ const ShoppingList = () => {
   )
 }
 
-export default ShoppingList
+export default Store

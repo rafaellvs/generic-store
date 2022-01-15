@@ -15,7 +15,7 @@ const Home = () => {
         Here you will find the most amazing products! Happy shopping!
       </Text>
 
-      <Link to='/shopping-list'>Go to our store</Link>
+      <Link to='/store'>Go to our store</Link>
     </Container>
   )
 }
