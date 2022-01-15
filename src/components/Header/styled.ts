@@ -1,8 +1,7 @@
 import styled from 'styled-components'
+import { AiOutlineMenu } from 'react-icons/ai'
 
 import theme from 'src/helpers/theme'
-
-import Link from 'src/components/core/Link'
 
 export const Container = styled.header`
   position: fixed;
@@ -27,20 +26,18 @@ export const Links = styled.div`
   a {
     padding-right: 16px;
   }
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 `
 
-export const CartLink = styled(Link)`
-  display: flex;
-  align-items: center;
-
-  svg {
+export const MenuIcon = styled(AiOutlineMenu)`
+  display: none;
+  
+  @media (max-width: 480px) {
+    display: block;
     fill: ${theme.colors.secondary};
-    padding-right: 5px;
-    font-size: 1.5rem;
-    transition: fill 0.3s;
-  }
-
-  :hover svg {
-    fill: ${theme.colors.secondaryHover};
+    font-size: 2rem;
   }
 `
