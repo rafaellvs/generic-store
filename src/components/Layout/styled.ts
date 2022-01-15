@@ -11,8 +11,14 @@ export const Container = styled.div`
 
 export const MainContent = styled.main`
   flex: 1;
+  width: 100%;
   max-width: 1200px;
   display: flex;
   justify-content: center;  
-  padding: calc(16px + ${theme.navbarHeight}) 16px;
+  padding: calc(16px + ${theme.navbarHeight}) 32px;
+
+  @media (max-width: 480px) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 `

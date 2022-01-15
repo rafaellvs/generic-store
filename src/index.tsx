@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import WebFont from 'webfontloader'
 
-import Router from 'src/components/Router'
-import GlobalStyles from 'src/helpers/global-styles'
+import App from 'src/components/App'
 
 WebFont.load({
   google: {
@@ -13,8 +12,7 @@ WebFont.load({
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyles />
-    <Router />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 )

@@ -1,23 +1,25 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
-import Layout from 'src/components/Layout'
+import React, { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 
 import Home from 'src/pages/Home'
 import ShoppingList from 'src/pages/ShoppingList'
+import Cart from 'src/pages/Cart'
 import NotFound from 'src/pages/NotFound'
 
 const Router = () => {
+  const location = useLocation()
+
+  useEffect(() => {
+    scrollTo(0, 0)
+  }, [location])
+
   return (
-    <Layout>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/shopping-list' element={<ShoppingList />} />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </Layout>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/shopping-list' element={<ShoppingList />} />
+      <Route path='/cart' element={<Cart />} />
+      <Route path='*' element={<NotFound />} />
+    </Routes>
   )
 }
 
