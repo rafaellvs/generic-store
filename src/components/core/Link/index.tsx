@@ -1,13 +1,15 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+
 import theme from 'src/helpers/theme'
 
-const Link = styled.a`
+const CoreLink = styled(Link)`
   color: ${theme.colors.secondary};
-  transition: opacity 0.3s;
+  transition: color 0.3s;
 
   :hover {
-    opacity: 0.7;
+    color: ${theme.colors.secondaryHover};
   }
 `
 
-export default Link
+export default CoreLink
