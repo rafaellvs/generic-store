@@ -1,21 +1,24 @@
-import React, { useContext } from 'react'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
+import React, { useState } from 'react'
+
 import logo from 'src/assets/images/logo.png'
 
-import CartContext from 'src/helpers/cart-context'
-
 import Link from 'src/components/core/Link'
+import CartLink from './CartLink'
+import MobileMenu from './MobileMenu'
 
 import {
   Container,
   Logo,
   Links,
-  CartLink
+  MenuIcon
 } from './styled'
 
 const Header = () => {
-  const { cartProducts } = useContext(CartContext)
-  const totalProductsAtCart = cartProducts.length
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+
+  const toggleMenu = (): void => {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
     <Container>
@@ -23,14 +26,19 @@ const Header = () => {
         <Logo src={logo} alt='Liven Logo' />
       </Link>
 
-      <Links>
-        <Link to='/shopping-list'>Shopping List</Link>
+      <div onClick={toggleMenu}>
+        <MenuIcon />
+      </div>
 
-        <CartLink to='/cart'>
-          <AiOutlineShoppingCart />
-          {`Cart (${totalProductsAtCart})`}
-        </CartLink>
+      <Links>
+        <Link to='/store'>Store</Link>
+        <CartLink />
       </Links>
+
+      <MobileMenu
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+      />
     </Container>
   )
 }

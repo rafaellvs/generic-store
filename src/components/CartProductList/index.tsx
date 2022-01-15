@@ -59,7 +59,7 @@ const CartProductList = () => {
             Make sure to check out our amazing products!
           </Text>
 
-          <Link to='/shopping-list'>Go to our store</Link>
+          <Link to='/store'>Go to our store</Link>
         </CartEmpty>
       }
 
