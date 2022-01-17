@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# Liven E-Commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Basic E-Commerce responsive application with a store and cart pages. Made with react typescript (CRA), styled-components, axios, jest.
 
-## Available Scripts
+To start the project, run `yarn` to install the required dependencies and then run `yarn start`.
 
-In the project directory, you can run:
+## Overview
+### Pages
+Home page: very basic page with a link to the actual store.
 
-### `yarn start`
+Store page: shows a list of available products from the provided endpoint. The product card contains basic information about it and an "Add to cart" button. Shows 9 results per load. Each load gets more results by using the `page` and `limit` query params.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Cart page: shows the list of products that were added to the shopping cart. Contains a "Remove all products" button to empty the cart. Also an info box for purchase details and the "Checkout" option.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Details
+Custom application theme at `helpers/theme`.
 
-### `yarn test`
+Uses React Context to manage the cart state, located at `helpers/cart-context`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Uses the `localStorage` to maintain the cart state on page refreshes. Useful management functions at `helpers/utils`. The application checks if the `localStorage` isn't empty and the Context state is. If so, syncs them by making single product requests (using product id).
 
-### `yarn build`
+Api interface located at `helpers/api`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Tests
+Very few tests, for core components, `Product` and `CartProductList`. To execute the testing interface, run `yarn test`.
