@@ -21,5 +21,10 @@ Uses the `localStorage` to maintain the cart state on page refreshes. Useful man
 
 Api interface located at `helpers/api`.
 
+### Dev notes
+Images from `lorempixel` aren't working, so I used a placeholder instead.
+
+Main PRs (for store and cart pages) got way too bloated. Had to break those down.
+
 ### Tests
 Very few tests, for core components, `Product` and `CartProductList`. To execute the testing interface, run `yarn test`.
