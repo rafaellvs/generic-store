@@ -36,7 +36,7 @@ const CartProductList = () => {
 
   const checkout = (): void => {
     Swal.fire({
-      title: 'Thank you for shopping at Liven Store!',
+      title: 'Thank you for shopping at Generic Store!',
       text: 'Your purchase has been registered and will soon be delivered to your home!',
       icon: 'success',
       confirmButtonText: 'OK',

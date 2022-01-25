@@ -36,7 +36,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: MobileMenuProps) => {
 
       <MenuContainer>
         <Text type='h1' padding='0 0 16px 0'>
-          Liven Store Menu
+          Generic Store Menu
         </Text>
 
         <Links>
