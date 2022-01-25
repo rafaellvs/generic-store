@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <Container>
       <Link to='/'>
-        <Logo src={logo} alt='Liven Logo' />
+        <Logo src={logo} alt='Generic Logo' />
       </Link>
 
       <div onClick={toggleMenu}>

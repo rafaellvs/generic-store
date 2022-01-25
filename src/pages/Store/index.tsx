@@ -9,7 +9,7 @@ const Store = () => {
   return (
     <Container>
       <Text type='h1' padding='0 0 32px 0'>
-        Liven Store
+        Generic Store
       </Text>
 
       <ProductList />
