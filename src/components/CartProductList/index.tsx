@@ -44,6 +44,7 @@ const CartProductList = () => {
     })
 
     setCartProducts([])
+    clearLocalStorage()
   }
 
   return (
