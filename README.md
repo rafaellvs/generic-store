@@ -1,4 +1,4 @@
-# Liven E-Commerce
+# Generic E-Commerce Store
 
 Basic E-Commerce responsive application with a store and cart pages. Made with react typescript (CRA), styled-components, axios, jest.
 
